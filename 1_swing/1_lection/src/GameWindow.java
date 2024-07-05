@@ -16,12 +16,11 @@ public class GameWindow extends JFrame {
         setSize(WINDOW_WIDTH, WINDOW_HEIGHT);
         setTitle("TicTacToe");
         setResizable(true);
-        JPanel panBottom = new JPanel();
-        GridLayout twoButtonsLayout = new GridLayout(1,2);
-        panBottom.setLayout(twoButtonsLayout); 
-        panBottom.add(btnStart);
-        panBottom.add(btnExit);
-        add(panBottom);
+        JPanel btnPnl = new JPanel();
+        btnPnl.setLayout(new GridLayout(1,2)); 
+        btnPnl.add(btnStart, BorderLayout.WEST);
+        btnPnl.add(btnExit, BorderLayout.EAST);
+        add(btnPnl, BorderLayout.SOUTH);
         setVisible(true);
     }
     // public static void main(String[] args) {
